@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>SHANA</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHANA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+<div class="bg-animation"></div>
+
 <div id="myDrawer" class="drawer">
   <span class="closebtn" onclick="closeDrawer()">&times;</span>
-  <a href="#about">About Me</a>
-  <a href="#posts">Blog Posts</a>
+  <a href="#about">About</a>
+  <a href="#posts">Blog</a>
   <a href="#contact">Contact</a>
 </div>
 
 <div id="main">
   <button class="openbtn" onclick="openDrawer()">&#9776; Menu</button>
-  
+
   <header>
     <h1>S H A N A</h1>
   </header>
@@ -29,14 +31,14 @@
 
   <section id="posts">
     <h2>Latest Posts</h2>
-    <article>
+    <div class="card">
       <h3>Post Title 1</h3>
       <p>This is a short summary of my first blog post.</p>
-    </article>
-    <article>
+    </div>
+    <div class="card">
       <h3>Post Title 2</h3>
       <p>This is a short summary of my second blog post.</p>
-    </article>
+    </div>
   </section>
 
   <section id="contact">
@@ -47,7 +49,7 @@
 
 <script>
 function openDrawer() {
-document.getElementById("myDrawer").style.width = "250px";
+  document.getElementById("myDrawer").style.width = "250px";
   document.getElementById("main").style.marginLeft = "250px";
 }
 function closeDrawer() {
