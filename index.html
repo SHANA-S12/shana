@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHANA</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<div id="myDrawer" class="drawer">
+  <span class="closebtn" onclick="closeDrawer()">&times;</span>
+  <a href="#about">About Me</a>
+  <a href="#posts">Blog Posts</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openDrawer()">&#9776; Menu</button>
+  
+  <header>
+    <h1>S H A N A</h1>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hello! I'm Shana. Welcome to my blog where I share thoughts, stories, and ideas.</p>
+  </section>
+
+  <section id="posts">
+    <h2>Latest Posts</h2>
+    <article>
+      <h3>Post Title 1</h3>
+      <p>This is a short summary of my first blog post.</p>
+    </article>
+    <article>
+      <h3>Post Title 2</h3>
+      <p>This is a short summary of my second blog post.</p>
+    </article>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: shana@example.com</p>
+  </section>
+</div>
+
+<script>
+function openDrawer() {
+document.getElementById("myDrawer").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+function closeDrawer() {
+  document.getElementById("myDrawer").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+
+</body>
+</html>
