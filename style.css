@@ -10,6 +10,20 @@ a {
   text-decoration: none;
 }
 
+/* Scroll animation */
+.scroll-section {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1),
+              transform 1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.scroll-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Profile Section */
 .container {
   display: flex;
   justify-content: center;
@@ -29,7 +43,7 @@ a {
 }
 
 .profile-img-wrapper {
-position: relative;
+  position: relative;
   width: 160px;
   height: 160px;
   margin: 0 auto 15px;
@@ -79,38 +93,13 @@ position: relative;
   color: #0ff;
 }
 
+/* Projects Section */
 .projects {
   padding: 50px 20px;
   text-align: center;
   background-color: #111827;
 }
-.footer {
-  background: linear-gradient(to right, #1a1a2e, #16213e);
-  padding: 20px 10px;
-  text-align: center;
-  color: #ccc;
-  margin-top: 40px;
-}
 
-.footer p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.footer-social {
-  margin-top: 10px;
-}
-
-.footer-social a {
-  color: #ccc;
-  margin: 0 8px;
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.footer-social a:hover {
-  color: #00f0ff;
-}
 .projects h2 {
   font-size: 30px;
   margin-bottom: 30px;
@@ -146,4 +135,33 @@ position: relative;
 .project-card p {
   font-size: 14px;
   color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background: linear-gradient(to right, #1a1a2e, #16213e);
+  padding: 20px 10px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.footer-social {
+  margin-top: 10px;
+}
+
+.footer-social a {
+  color: #ccc;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #00f0ff;
 }
