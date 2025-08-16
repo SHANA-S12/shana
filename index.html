@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<section class="container">
+<section class="container scroll-section">
   <div class="profile-card">
     <div class="profile-img-wrapper">
       <span class="glow-ring"></span>
@@ -22,7 +22,7 @@
     <div class="contact-info">
       <p>📱 <a href="https://wa.me/94775807293">WhatsApp Me</a></p>
       <p>📧 <a href="mailto:thathsarana200405@gmail.com">Email Me</a></p>
-      </div>
+    </div>
     <div class="social-icons">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -31,7 +31,7 @@
   </div>
 </section>
 
-<section class="projects">
+<section class="projects scroll-section">
   <h2>My Projects</h2>
   <div class="project-grid">
     <div class="project-card">
@@ -48,7 +48,8 @@
     </div>
   </div>
 </section>
-<footer class="footer">
+
+<footer class="footer scroll-section">
   <div class="footer-content">
     <p>© 2025 D M T Deshan. All Rights Reserved.</p>
     <div class="footer-social">
@@ -58,5 +59,22 @@
     </div>
   </div>
 </footer>
+
+<script>
+  const scrollSections = document.querySelectorAll('.scroll-section');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');   // Scroll Down → Fade In
+      } else {
+        entry.target.classList.remove('show'); // Scroll Up → Fade Out
+      }
+    });
+  }, { threshold: 0.2 });
+
+  scrollSections.forEach(section => observer.observe(section));
+</script>
+
 </body>
 </html>
